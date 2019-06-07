@@ -22,13 +22,12 @@
                 android:text="シャンプーのストック"
                 android:textSize="30sp" />
 
-            <EditText
-                android:id="@+id/editText2"
+            <TextView
+                android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="enter a number" />
+                android:text="買ってきたよ"
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/editText"
@@ -36,7 +35,14 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="enter a number" />
+                android:text="number" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ストック数"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textView"
