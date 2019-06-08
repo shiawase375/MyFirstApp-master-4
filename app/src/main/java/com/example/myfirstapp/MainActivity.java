@@ -26,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
         Button button=findViewById(R.id.button3);//ボタンの設定
         TextView textView2=findViewById(R.id.textView);//"シャンプーのストック"
         final SharedPreferences[] datastore = new SharedPreferences[1];//データ保存先
+
+
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,23 +44,24 @@ public class MainActivity extends AppCompatActivity {
                 editor.putInt("count", c[0]);//保存先にデータ追加
                 editor.commit();
 
-
-
                 Timer timer;
-                timer = new Timer();
+                timer =new
+
+                        Timer();
+
                 TimerTask timerTask = new TimerTask() {
                     @Override
                     public void run() {
-                        c[0] =c[0]-2;
+                        c[0] = c[0] - 2;
                         TextView textView1 = (TextView) findViewById(R.id.textView);
                         textView1.setText(String.valueOf(c[0]));
                     }
                 };
-                timer.scheduleAtFixedRate(timerTask, 0,     10000);
+                timer.scheduleAtFixedRate(timerTask,0,10000);
 
 
 
-                
+
 
 
             }
@@ -68,5 +72,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 
 }
