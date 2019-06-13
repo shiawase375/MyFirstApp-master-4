@@ -3,6 +3,7 @@ package com.example.myfirstapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.backup.SharedPreferencesBackupHelper;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -28,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setViews();
 
+        Intent intent=this.getIntent();
+        String text=intent.getStringExtra("sendText");
+        TextView textView=(TextView)this.findViewById(R.id.textView);
+
         // timer =new Timer();
         // TimerTask timerTask=new MyTimerTask();
         // this.timerTask=new TimerTask();
@@ -40,7 +45,8 @@ public class MainActivity extends AppCompatActivity {
         TextView textView2 = findViewById(R.id.textView);
         Button button = findViewById(R.id.button3);//ボタンの設定
         button.setOnClickListener(onClick_button);
-
+        Button retun=findViewById(R.id.button);//returnボタンの設定
+        retun.setOnClickListener(return_button);
     }
 
 
@@ -78,29 +84,19 @@ public class MainActivity extends AppCompatActivity {
                 timer.scheduleAtFixedRate(timerTask, 0, 10000);
 
 
+
             }
 
 
             };
 
-
-
-
-
-
- /*   private class MyTimerTask extends TimerTask {
-        @Override
-        public void run() {
-           int c=datastore.getInt("storedata",0);
-           c -= 2;
-            TextView textView1 = (TextView) findViewById(R.id.textView);
-            textView1.setText(String.valueOf(c));
+    private View.OnClickListener return_button=new View.OnClickListener(){
+        public void onClick(View view) {
+            finish();
         }
-    };
-    */
+        };
+    }
 
 
-
-}
 
 
