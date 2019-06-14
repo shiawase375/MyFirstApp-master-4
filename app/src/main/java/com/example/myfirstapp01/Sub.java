@@ -14,25 +14,27 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class Sub extends AppCompatActivity {
+    /*
     private Timer timer;//タイマー用
     private SharedPreferences datastore;
     private EditText editText;
+    */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub);
-        setViews();//add
+      //  setViews();//add
         // Get the Intent that started this activity and extract the string
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 
         // Capture the layout's TextView and set the string as its text
-        TextView textView1 = findViewById(R.id.textView);
-        textView1.setText(message);
+        TextView textView = findViewById(R.id.textView);
+        textView.setText(message);
     }
-
+/*
     private void setViews() {
-    //    TextView textView2 = findViewById(R.id.textView);
+       TextView textView2 = findViewById(R.id.textView);
         Button button = findViewById(R.id.button3);//ボタンの設定
         button.setOnClickListener(onClick_button);
       //  Button retun=findViewById(R.id.button);//returnボタンの設定
@@ -45,7 +47,7 @@ public class Sub extends AppCompatActivity {
         @Override
 
         public void onClick(View view) {
-            EditText editText = (EditText) findViewById(R.id.editText);//入力値
+            EditText editText = (EditText) findViewById(R.id.editText2);//入力値
             SharedPreferences preferences = getSharedPreferences("storedata", MODE_PRIVATE);
             //データ保存
 
@@ -75,5 +77,5 @@ public class Sub extends AppCompatActivity {
 
 
     };
-
+*/
 }
