@@ -85,7 +85,7 @@ public class NotificationActivity extends AppCompatActivity {
                     textView1.setText(String.valueOf(c[0]));
                 }
             };
-            timer.scheduleAtFixedRate(timerTask, 0, 100000);
+            timer.scheduleAtFixedRate(timerTask, 0, 10000);
 
 
 
